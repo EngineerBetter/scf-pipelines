@@ -56,9 +56,6 @@ jobs:
     params:
       << : *ci-bucket-params
       action: destroy
-      vars:
-        force-destroy: true
-
 
 - name: setup-eks
   plan:
