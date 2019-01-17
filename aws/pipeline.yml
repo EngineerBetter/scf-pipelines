@@ -56,6 +56,8 @@ jobs:
     params:
       << : *ci-bucket-params
       action: destroy
+      get_params:
+        action: destroy
 
 - name: setup-eks
   plan:
@@ -78,3 +80,5 @@ jobs:
       action: destroy
       terraform_source: scf-pipelines/aws/tf/eks
       env_name: dev
+      get_params:
+        action: destroy
