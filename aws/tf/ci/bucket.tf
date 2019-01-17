@@ -5,6 +5,6 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "ci" {
-  bucket = "kcf-pipeline"
+  bucket = "scf-pipeline"
   acl    = "private"
 }
