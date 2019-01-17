@@ -52,11 +52,12 @@ jobs:
 - name: delete-ci-bucket
   plan:
   - get: scf-pipelines
-    trigger: true
   - put: ci-bucket
     params:
       << : *ci-bucket-params
       action: destroy
+      vars:
+        force-destroy: true
 
 
 - name: setup-eks
